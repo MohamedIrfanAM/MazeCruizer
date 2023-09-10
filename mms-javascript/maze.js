@@ -328,9 +328,15 @@ class Maze {
                 }
             }
             else if(y-this.y == -1){
-                this.turn(2);
-                this.y--;
-                this.moveForward();
+                if(this.getWall(2)){
+                    this.H[this.x][this.y] = 1;
+                    wallFound = true;
+                }
+                else{
+                    this.turn(2);
+                    this.y--;
+                    this.moveForward();
+                }
             }
             else if(x-this.x == 1){
                 if(this.getWall(1)){
