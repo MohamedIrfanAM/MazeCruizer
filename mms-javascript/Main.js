@@ -13,18 +13,23 @@ var maze = new Maze(rows,cols);
 function main() {
     log("Running...");
     maze.initialize();
-    maze.floodFill()
-    maze.update()
 
-    while (true) {
-        if (!API.wallLeft()) {
-            API.turnLeft();
-        }
-        while (API.wallFront()) {
-            API.turnRight();
-        }
-        API.moveForward();
+    while(!maze.isFinished()) {
+        maze.floodFill()
+        maze.update();
+        maze.explore();
+
+        maze.floodFill();
+        maze.update();
+        maze.explore();
+
+        maze.floodFill();
+        maze.update();
+        maze.explore();
     }
+    // maze.floodFill();
+    // maze.update();
+    // maze.findPath(0,0);
 }
 
 main();
