@@ -47,26 +47,22 @@ void turnLeft()
 
 void setWall(int x, int y, char direction)
 {
-  Serial.print(
-      "setWall " + String(x) + " " + String(y) + " " + String(direction) + "\n");
+  Serial.print("setWall " + String(x) + " " + String(y) + " " + String(direction) + "\n");
 }
 
 void clearWall(int x, int y, char direction)
 {
-  Serial.print(
-      "clearWall " + String(x) + " " + String(y) + " " + String(direction) + "\n");
+  Serial.print("clearWall " + String(x) + " " + String(y) + " " + String(direction) + "\n");
 }
 
 void setColor(int x, int y, char color)
 {
-  Serial.print(
-      "setColor " + String(x) + " " + String(y) + " " + String(color) + "\n");
+  Serial.print("setColor " + String(x) + " " + String(y) + " " + String(color) + "\n");
 }
 
 void clearColor(int x, int y)
 {
-  Serial.print(
-      "clearColor " + String(x) + " " + String(y) + "\n");
+  Serial.print("clearColor " + String(x) + " " + String(y) + "\n");
 }
 
 void clearAllColor()
@@ -76,14 +72,12 @@ void clearAllColor()
 
 void setText(int x, int y, String text)
 {
-  Serial.print(
-      "setText " + String(x) + " " + String(y) + " " + text + "\n");
+  Serial.print("setText " + String(x) + " " + String(y) + " " + text + "\n");
 }
 
 void clearText(int x, int y)
 {
-  Serial.print(
-      "clearText " + String(x) + " " + String(y) + "\n");
+  Serial.print("clearText " + String(x) + " " + String(y) + "\n");
 }
 
 void clearAllText()

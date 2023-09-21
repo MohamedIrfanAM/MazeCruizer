@@ -1,4 +1,3 @@
-#include "api.h"
 #include "maze.h"
 
 void setup()
@@ -8,9 +7,11 @@ void setup()
 
 void loop()
 {
-  moveForward();
   Maze maze;
   maze.intialize();
+  moveForward();
+  // maze.update();
+  // maze.floodFill();
   log("Running...");
   setColor(0, 0, 'G');
   setText(0, 0, "abc");
@@ -25,5 +26,6 @@ void loop()
       turnRight();
     }
     moveForward();
+    delay(100);
   }
 }
