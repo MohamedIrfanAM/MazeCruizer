@@ -102,7 +102,7 @@ void Maze::floodFill()
   D[7][7] = 0;
   while (!Q.isEmpty())
   {
-    int *r = Q.del();
+    short int *r = Q.del();
     int x = r[0];
     int y = r[1];
 
@@ -206,7 +206,6 @@ void Maze::findPath()
       break;
     }
   }
-  return path;
 }
 
 void Maze::setWallDir(int dir)
