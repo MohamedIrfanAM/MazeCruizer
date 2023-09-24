@@ -1,18 +1,32 @@
 #include "bot.h"
 
+Bot bot;
 void setup()
 {
-  Bot bot;
   bot.initialize();
 }
 
 void loop()
 {
-  Bot bot;
-  bot.initialize();
-  bot.forward();
-  bot.right();
-  bot.left();
-  bot.stop();
-  bot.forward();
+  if (bot.frontWall())
+  {
+    Serial.println("Front Wall");
+    bot.right(175);
+    delay(100);
+    bot.forward();
+  }
+  else if (bot.rightWall())
+  {
+    bot.right(45);
+    Serial.println("No Wall,going forward");
+  }
+  else if (bot.leftWall())
+  {
+    bot.left(45);
+    Serial.println("No Wall,going forward");
+  }
+  else if(!bot.frontWall()){
+    bot.forward();
+  }
+  delay(100);
 }
