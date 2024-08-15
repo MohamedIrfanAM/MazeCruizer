@@ -5,21 +5,25 @@
 class Bot
 {
 private:
-  // Motor
+  // Motor and encoders
   int leftMotor1 = 5;
-  int leftMotor2 = 6;
-  int leftMotorEn = 10;
-  int leftMotorSpeed = 100;
+  int leftMotor2 = 4;
+  int leftMotorEn = 3;
+  int leftEncoder1 = 12;
+  int leftEncoder2 = 13;
+  int leftMotorSpeed = 155;
   int leftMotorCount = 0;
-  int rightMotor1 = 4;
-  int rightMotor2 = 3;
-  int rightMotorEn = 11;
-  int rightMotorSpeed = 100;
+  int rightMotor1 = 8;
+  int rightMotor2 = 7;
+  int rightMotorEn = 6;
+  int rightEncoder1 = 14;
+  int rightEncoder2 = 15;
+  int rightMotorSpeed = 155;
   int rightMotorCount = 0;
   // Sensor
-  int frontIr = 7;
-  int leftIr = 12;
-  int rightIr = 8;
+  int frontIr = 11;
+  int leftIr = 0;
+  int rightIr = 1;
 
 public:
   void initialize();
